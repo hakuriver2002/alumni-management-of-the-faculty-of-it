@@ -1,0 +1,300 @@
+:root {
+    --primary: #111926;
+    --white: #fff;
+    --background: #F8F8FF;
+    --gray: #D3D3D3;
+    --text: #262626;
+    --like: #FF3040;
+    --background-button: #C07F00;
+    --text-button: #FFF7D4;
+    --ctn-white: #F7F9FB;
+    --ctn-white-blue: #8FC1E3;
+    --ctn-blue-dark: #5085A5;
+    --ctn-blue: #31708E;
+    --ctn-black: #687864;
+    
+
+}
+
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+.content {
+    width: 100%;
+
+}
+
+.content section {
+    padding: 6rem 0 7rem;
+}
+.content-section .title {
+    font-size: 20px;
+    font-weight: 200;
+
+}
+.content-section .search-alumni {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 16px;
+}
+
+.content-section .search-alumni > input {
+    border: 1px solid var(--text-gray);
+    color: var(--text-color);
+    min-height: 2.25rem;
+    font-size: 1.2rem;
+    flex: 1 0 8rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.content-section .search-alumni > button {
+    cursor: pointer;
+    background: var(--text-color);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.25rem;
+    width: 5rem;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+    flex: 1 0 5rem;
+    white-space: nowrap;
+    padding: 0.5rem 0.75rem;
+    border: 0;
+    outline: none;
+}
+
+.content-section .search-alumni > button:hover {
+    background-color: var(--background-button);
+}
+
+.card {
+    background: var(--white);
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 6px;
+    display: flex;
+    width: 19rem;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.alumni-section .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 16px;
+}
+
+.alumni-section .card__preview {
+    height: 13.5rem !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.alumni-section .card__preview img {
+    width: 100%;
+    height: 20rem;
+    object-fit: fill;
+    object-position: center bottom;
+    transition: all 0.4s ease-out;
+}
+
+.alumni-section .card__title__working {
+    margin-bottom: 0.5rem;
+}
+
+.alumni-section .card:hover .card__preview img {
+    transform: scale(1.35);
+}
+
+.alumni-section .card__address {
+    margin-top: 0.5rem;
+}
+
+.alumni-section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.alumni-section .card__date {
+    background-color: var(--white);
+    color: var(--ctn-blue-dark);
+    z-index: 1;
+    position: absolute;
+    bottom: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    left: 1.25rem;
+    font-weight: bold;
+}
+
+.alumni-section .card__content {
+    padding: 0.85rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: var(--text);
+}
+.alumni-section .card__content a{
+    text-decoration: none;
+}
+.alumni-section .card__content h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text);
+}
+.alumni-section .card__content h3{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--ctn-black);
+}
+.alumni-section .card__content .card__social {
+    display: flex;
+    margin: 0.5rem 0;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.alumni-section .card__content .card__social i {
+    font-size: 25px;
+    border-radius: 20px;
+    border: var(--primary);
+    padding: 0 20px 0 20px;
+}
+.alumni-section .card__bottom {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.alumni-section .card__buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.alumni-section .card__content .card__button {
+    width: 100%;
+    background-color: var(--ctn-blue);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.alumni-section .card__content .card__button:hover {
+    background-color: var(--ctn-blue-dark);
+}
+.alumni-section .card__content .card__button a{
+    width: 100%;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--ctn-white);
+    font-size: 20px;
+}
+
+.alumni-section .card__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alumni-section .card__btn svg {
+    height: 2rem;
+    width: 2rem;
+    stroke: var(--text);
+    stroke-width: 1.5px;
+}
+
+.alumni-section .card__btn--like svg {
+    stroke: var(--like);
+    fill: var(--like);
+}
+
+/* Pagination */
+.pagination-table {
+    position: relative;
+    width: 26.3rem;
+    margin: 3rem auto;
+    background-color: transparent;
+}
+
+.pagination ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    background: #fff;
+    align-items: center;
+    margin-top: 1rem;
+    justify-items: center;
+    padding: 0 1rem;
+    border-radius: 1.5rem;
+    /* box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); */
+}
+
+.pagination ul li {
+    color: var(--ctn-blue);
+    list-style: none;
+    line-height: 35px;
+    padding: 2px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.pagination ul li.numb {
+    list-style: none;
+    height: 30px;
+    width: 30px;
+    margin: 0 3px;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+.pagination ul li.numb.first {
+    margin: 0 3px 0 5px;
+}
+
+.pagination ul li.numb.last {
+    margin: 0 5px 0 3px;
+}
+
+.pagination ul li.dots {
+    font-size: 22px;
+    cursor: default;
+}
+
+.pagination ul li.btn {
+    margin-bottom: 0;
+    padding: 0 20px;
+    border-radius: 50px;
+}
+
+.pagination li.active,
+.pagination ul li.numb:hover,
+.pagination ul li:first-child:hover,
+.pagination ul li:last-child:hover {
+    color: #fff;
+    background: var(--ctn-blue);
+}

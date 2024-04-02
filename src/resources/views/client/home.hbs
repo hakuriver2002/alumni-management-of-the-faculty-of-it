@@ -1,0 +1,310 @@
+<div class="content">
+    {{!-- Flash message --}}
+    {{#if messageSuccess}}
+    <div class="notification_success">
+        <div class="notification__body">
+            <svg class="bi flex-shrink-0 me-2 mr-3" width="24" height="24" role="img" aria-label="Warning:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+            {{ messageSuccess }}
+        </div>
+        <div class="notification__progress_1"></div>
+    </div>
+    {{/if}}
+
+    {{#if messageWarning}}
+    <div class="notification_warning">
+        <div class="notification__body">
+            <svg class="bi flex-shrink-0 me-2 mr-3" width="20" height="20" role="img" aria-label="Warning:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            {{ messageWarning }}
+        </div>
+        <div class="notification__progress_2"></div>
+    </div>
+    {{/if}}
+
+    {{#if messageError}}
+    <div class="notification_error">
+        <div class="notification__body">
+            <svg class="bi flex-shrink-0 me-2 mr-3" width="20" height="20" role="img" aria-label="Error:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            {{ messageError }}
+        </div>
+        <div class="notification__progress_3"></div>
+    </div>
+    {{/if}}
+
+    {{#unless currentUser}}
+    {{!-- About website --}}
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>Về chúng tôi</h1>
+                </div>
+                <div class="center-title">Khoa công nghệ thông tin</div>
+                <div class="content">
+                    <p>Khoa Công Nghệ Thông Tin (CNTT) có tiền thân là khoa Toán – Tin ra đời năm 1997 – cùng thời điểm
+                        thành lập trường Đại học Tôn Đức Thắng. Đến ngày 02/03/2012, Khoa được tách ra và đổi tên thành
+                        Khoa CNTT đảm nhận vai trò đào tạo nguồn nhân lực chuyên sâu trong lĩnh vực Khoa học Máy tính để
+                        đáp ứng nhu cầu cho sự phát triển bền vững của xã hội. Sau khi tốt nghiệp, sinh viên Khoa CNTT
+                        không những được trang bị khả năng lập trình tốt mà còn được trang bị các kiến thức về phân tích
+                        thiết kế hệ thống, quản trị mạng, thiết kế web, quản trị và phát triển các hệ thống thông tin
+                        cho các cơ quan, tổ chức, doanh nghiệp.</p>
+                    <p>Khoa CNTT đã và đang là một trong những khoa có uy tín về giảng dạy và nghiên cứu khoa học của
+                        trường Đại học Tôn Đức Thắng. Khoa CNTT có nhiều chương trình hợp tác đào tạo với các công ty
+                        lớn như IBM, LogiGear, FSOFT nên sinh viên có khả năng thực hành tốt. Chất lượng đào tạo của
+                        Khoa được khẳng định với trên 90 % sinh viên ra trường <b>có việc làm đúng chuyên môn</b>. Nhiều
+                        cựu sinh viên của Khoa hiện là những chuyên gia thành đạt, giữ các chức vụ quan trọng trong các
+                        doanh nghiệp phát triển phần mềm, các công ty có sử dụng hệ thống thông tin như trưởng dự án hay
+                        giám đốc kỹ thuật.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{!-- Introduction Team --}}
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="title">
+                <h1 class="heading">Nhóm của chúng tôi</h1>
+            </div>
+
+            <div class="team-content">
+                <div class="box">
+                    <img src="./img/avatars/din.jpg">
+                    <h3>Trần Hoàng Quang Din</h3>
+                    <h5>Developer</h5>
+                    <div class="icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./img/avatars/nam.jpg">
+                    <h3>Đoàn Phương Nam</h3>
+                    <h5>Developer</h5>
+                    <div class="icons">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{/unless}}
+
+    {{#if currentUser}}
+    {{!-- Event List --}}
+    <section class="event-section" id="events">
+        <div class="container">
+            <div class="title">
+                <h1 class="heading">Sự kiện sắp tới</h1>
+            </div>
+            <div class="top-bar">
+                <button type="button" disabled id="action-button--previous" class="action-button--horizontal-scroll">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24">
+                        <path
+                            d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z">
+                        </path>
+                    </svg>
+                </button>
+                <button type="button" id="action-button--next" class="action-button--horizontal-scroll">
+                    <svg width="16" height="16" fill="currentColor" focusable="false" viewBox="0 0 24 24">
+                        <path
+                            d="M12.771 7.115a.829.829 0 0 0-1.2 0L3 15.686l1.2 1.2 7.971-7.971 7.972 7.971 1.2-1.2-8.572-8.571Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div id="events">
+                {{#each events}}
+                <a href="events/{{_id}}" class="event">
+                    <div class="event__image">
+                        <img src="./uploads/event/{{ banner }}" alt="{{ event_title }}">
+                        <div class="event__indicator event__date">
+                            {{ start_time }} 
+                            <div class="event__date__month" id="start_date_{{_id}}">
+                            </div>
+                        </div>
+                        <div class="event__indicator event__type">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 5l0 2" />
+                                <path d="M15 11l0 2" />
+                                <path d="M15 17l0 2" />
+                                <path
+                                    d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+                            </svg>
+                        </div>
+
+                    </div>
+                    <div class="event-description">
+                        <h2>
+                            {{ event_title}}
+                        </h2>
+                        <div class="bottom-stats">
+                            <div class="bottom-stat">
+                                <div class="circle circle--red"></div>
+                                40 người tham gia
+                            </div>
+                            <div class="bottom-stat">
+                                <div class="circle circle--green"></div>
+                                10 vị trí
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+    {{!-- Gallery --}}
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="title">
+                <h1 class="heading">Thư viện ảnh</h1>
+            </div>
+
+            <div class="cards">
+                <figure class="gallery-2">
+                    <div class="corner left-top"></div>
+                    <div class="corner left-bottom"></div>
+                    <div class="corner right-top"></div>
+                    <div class="corner right-bottom"></div>
+                    <img src="./img/gallery/AI.jpg" alt="Lakeview Elegance">
+                    <figcaption>
+                        <h3>Khoa Học Máy Tính</h3>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-2">
+                    <div class="corner left-top"></div>
+                    <div class="corner left-bottom"></div>
+                    <div class="corner right-top"></div>
+                    <div class="corner right-bottom"></div>
+                    <img src="./img/gallery/Security.jpg" alt="Vista Paradiso" />
+                    <figcaption>
+                        <h3>Mạng Máy Tính</h3>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-2">
+                    <div class="corner left-top"></div>
+                    <div class="corner left-bottom"></div>
+                    <div class="corner right-top"></div>
+                    <div class="corner right-bottom"></div>
+                    <img src="./img/gallery/HTTT.jpg" alt="Balcony Apartment" />
+                    <figcaption>
+                        <h3>Hệ Thống Thông Tin</h3>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-2">
+                    <div class="corner left-top"></div>
+                    <div class="corner left-bottom"></div>
+                    <div class="corner right-top"></div>
+                    <div class="corner right-bottom"></div>
+                    <img src="./img/gallery/KTPM.jpg" alt="Skyline Oasis" />
+                    <figcaption>
+                        <h3>Công Nghệ Phần Mềm</h3>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="gallery">
+                <figure class="card">
+                    <img src="./img/gallery/CLB_2020.jpg" alt="Cau lac bo ICON">
+                </figure>
+                <figure class="card">
+                    <img src="./img/gallery/tham-quan-FPT-Telecom-16.jpg" alt="Tham quan FPT Telecom 16">
+                </figure>
+                <figure class="card">
+                    <img src="./img/gallery/tour.jpg" alt="Tham quan NASAS">
+                </figure>
+                <figure class="card">
+                    <img src="./img/gallery/trinh-dien.jpg" alt="Trinh dien mung 25 nam">
+                </figure>
+            </div>
+
+
+        </div>
+    </section>
+
+    {{!-- Contact Info --}}
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="title">
+                <h2 class="heading">Thông tin liên hệ</h2>
+            </div>
+            <div class="container-content">
+                <div class="content">
+                    <div class="left-side">
+                        <div class="address detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h2>Address</h2>
+                            <h3>Phòng C004, Khoa CNTT</h3>
+                        </div>
+                        <div class="phone detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <h2>Phone</h2>
+                            <h3>(+84) 944 217 297 </h3>
+                            <h3>(+84) 785 783 035 </h3>
+                        </div>
+                        <div class="email detail">
+                            <i class="fas fa-envelope"></i>
+                            <h2>Email</h2>
+                            <h3>52000882@student.tdtu.edu.vn</h3>
+                            <h3>52000895@student.tdtu.edu.vn</h3>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="topic-text">Thông tin liên hệ</div>
+                        <p>Nếu bạn có thắc mắc gì, hãy liên hệ cho chúng tôi biết</p>
+                        <form action="#">
+                            <div class="inpux-box">
+                                {{#if currentUser}}
+                                <input type="text" placeholder="Nhập tên của bạn"
+                                     value="{{ currentUser.fullname }}">
+                                {{else}} 
+                                <input type="text" placeholder="Nhập tên của bạn"
+                                     value="">
+                                {{/if}}
+                            </div>
+                            <div class="inpux-box">
+                                {{#if currentUser}}
+                                <input type="text" placeholder="Nhập email"
+                                    value="{{ currentUser.email }}">
+                                {{else}} 
+                                <input type="text" placeholder="Nhập email"
+                                    value="">
+                                {{/if}}
+                            </div>
+                            <div class="inpux-box message-box">
+                                <textarea class="px-3 py-2" placeholder="Nhập nội dung"></textarea>
+                            </div>
+                            <div class="button">
+                                <input type="button" value="Gửi">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    $(document).ready(function () {
+        {{#each events}}
+        const ds_{{ _id}} =  new Date(`{{ start_date }}`);
+        $('#start_date_{{_id}}').html(ds_{{_id}}.getDate() + "/" + (ds_{{_id}}.getMonth() + 1) + "/" + ds_{{_id}}.getFullYear());
+        {{/each}}
+    })
+</script>

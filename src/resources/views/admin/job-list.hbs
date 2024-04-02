@@ -1,0 +1,486 @@
+<body class="g-sidenav-show  bg-gray-200">
+    {{!-- Sidebar --}}
+    <aside
+        class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
+        id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="#">
+                <h6 class="font-weight-bold text-white">Alumni Management System</h6>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../dashboard">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">dashboard</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Bảng điều khiển</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Quản lý
+                    </h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../users">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">manage_accounts</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Phê duyệt tài khoản</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../alu">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">groups</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Cựu sinh viên</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-primary" href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">list_alt</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Bài đăng tuyển dụng</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../events">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">event</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Sự kiện</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">forum</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Diễn đàn</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">collections</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Thư viện ảnh</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Thông tin cá
+                        nhân
+                    </h6>
+                </li>
+                {{#if currentUser}}
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person</i>
+                        </div>
+                        <span class="nav-link-text ms-1">{{currentUser.email}}</span>
+                    </a>
+                </li>
+                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">notifications</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Thông báo</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/api/admin/logout">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">login</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+            data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="../dashboard">
+                                Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Bài đăng tuyển dụng</li>
+                    </ol>
+                    <h4 class="font-weight-bolder mb-0">{{title}}</h4>
+                </nav>
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                        <div class="input-group input-group-outline">
+                            <label class="form-label">Tìm kiếm...</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <ul class="navbar-nav  justify-content-end">
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown pe-2 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell cursor-pointer"></i>
+                            </a>
+                            <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4"
+                                aria-labelledby="dropdownMenuButton">
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../img/avatars/din.jpg" class="avatar avatar-sm  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">Tin nhắn mới</span> từ Din
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    13 phút trước
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../img/avatars/default-user.jpg"
+                                                    class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">Tài khoản mới</span> yêu cầu phê
+                                                    duyệt
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    1 ngày trước
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../img/avatars/user-1.jpg"
+                                                    class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">Admin Nam Đoàn</span> đã đăng bài
+                                                    tuyển dụng
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    1 tuần trước
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{#if currentUser}}
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="#" class="nav-link text-body font-weight-bold px-0">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span class="d-sm-inline d-none"> {{currentUser.fullname}}</span>
+                            </a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="text-white text-capitalize list-group-item ps-3 pt-1">Bài đăng tuyển dụng</h6>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end pe-xxl-4">
+                                        <a class="btn bg-white w-20 mb-0" href="create">Thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0" id="myTable">
+                                    <thead>
+                                        <tr>
+                                            <th onclick="sortBy(0)"
+                                                class="text-center text-uppercase text-secondary text-xs font-weight-bolder">
+                                                STT
+                                                <i class="fa fa-sort p-1"></i>
+                                            <th onclick="sortBy(1)"
+                                                class="text-uppercase text-secondary text-xs font-weight-bolder">
+                                                Tiêu đề
+                                                <i class="fa fa-sort p-1"></i>
+                                            </th>
+                                            <th onclick="sortBy(3)"
+                                                class="text-center text-uppercase text-secondary text-xs font-weight-bolder">
+                                                Tên công ty
+                                                <i class="fa fa-sort p-1"></i>
+                                            </th>
+                                            <th onclick="sortBy(4)"
+                                                class="text-center text-uppercase text-secondary text-xs font-weight-bolder">
+                                                Mức lương
+                                                <i class="fa fa-sort p-1"></i>
+                                            </th>
+                                            <th onclick="sortBy(5)"
+                                                class="text-center text-uppercase text-secondary text-xs font-weight-bolder">
+                                                Địa điểm
+                                                <i class="fa fa-sort p-1"></i>
+                                            </th>
+                                            <th onclick="sortBy(6)"
+                                                class="text-center text-uppercase text-secondary text-xs font-weight-bolder">
+                                                Ngày đăng
+                                                <i class="fa fa-sort p-1"></i>
+                                            </th>
+                                            <th class="text-secondary"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each jobs}}
+                                        <tr>
+                                            <td class="align-middle text-center text-sm">
+                                                <p class="text-xs font-weight-bolder mb-0">{{no1 @index }}</p>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex px-1 py-1">
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">{{ job_title }}
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <p class="text-xs font-weight-bolder mb-0" id="title_company">{{ company }}</p>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <p class="text-xs font-weight-bolder mb-0" id="salary">{{ salary }}</p>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <p class="text-xs font-weight-bolder mb-0" id="title_location">{{ location }}</p>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <p class="text-xs font-weight-bolder mb-0" id="post_at_{{_id}}">{{ post_at }}</p>
+                                            </td>
+                                            <td class="align-middle">
+                                                <a href="update/{{ _id }}" class="edit" title="Cập nhật"
+                                                    data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                                <a href="#" class="delete" title="Xóa" data-toggle="tooltip"
+                                                    data-bs-toggle="modal" data-bs-target="#confirmModal"
+                                                    data-id="{{ _id }}"><i class="material-icons">&#xE872;</i></a>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                                <div class="pagination pagination-table">
+                                    <ul> <!--pages or li are comes from javascript --> </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer py-4  ">
+                    <div class="container-fluid">
+                        <div class="row align-items-center justify-content-lg-between">
+                            <div class="col-lg-6 mb-lg-0 mb-4">
+                                <div class="copyright text-center text-sm text-muted text-lg-start">
+                                    © Copyright
+                                    <script>
+                                        document.write(new Date().getFullYear())
+                                    </script> Ton Duc Thang University.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <!-- Modal Verify -->
+        </div>
+        <!-- Modal delete -->
+        <div id="confirmModal" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-confirm">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-header">
+                        <div class="icon-box">
+                            <i class="material-icons">&#xE5CD;</i>
+                        </div>
+                        <h4 class="modal-title">Bạn chắc chứ?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Bạn có chắn chắn muốn xóa thông tin bài đăng này?
+                            Hành động này không thể khôi phục lại.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-bs-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-danger btn-delete" id="btn-delete">Xóa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+
+        $(document).ready(function () {
+            // delete user
+            $('.delete').on('click', function () {
+                let id_val = $(this).data('id');
+                $('.btn-delete').attr('data-id', id_val);
+
+            })
+
+            // delete user
+            $('.btn-delete').on('click', function () {
+                let id_delete = $('.btn-delete').attr('data-id');
+                console.log(id_delete)
+                $.ajax({
+                    type: 'DELETE',
+                    url: 'delete/' + id_delete,
+                    success: function (data) {
+                        window.location.reload();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+
+            let VND =new Intl.NumberFormat('vi-VN', {style: 'currency', currency: 'VND'});
+
+            let y = document.querySelectorAll("#salary");
+            for (let i = 0; i < y.length; i++) {
+                let price = Number(y[i].innerHTML);
+                y[i].innerHTML = VND.format(price);
+            }
+
+            {{#each jobs }}
+            const pd_{{_id}} =  new Date(`{{ post_at }}`);
+            $('#post_at_{{_id}}').html(pd_{{_id}}.getDate() + "/" + (pd_{{_id}}.getMonth() + 1) + "/" + pd_{{_id}}.getFullYear());
+            {{/each}}
+        });
+
+    </script>
+
+    <script>
+            // selecting required element
+            const element = document.querySelector(".pagination ul");
+            let totalPages = 20;
+            let page = 10;
+
+            //calling function with passing parameters and adding inside element which is ul tag
+            element.innerHTML = createPagination(totalPages, page);
+            function createPagination(totalPages, page) {
+                let liTag = '';
+                let active;
+                let beforePage = page - 1;
+                let afterPage = page + 1;
+                if (page > 1) { //show the next button if the page value is greater than 1
+                    liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i> Prev</span></li>`;
+                }
+
+                if (page > 2) { //if page value is less than 2 then add 1 after the previous button
+                    liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+                    if (page > 3) { //if page value is greater than 3 then add this (...) after the first li or page
+                        liTag += `<li class="dots"><span>...</span></li>`;
+                    }
+                }
+
+                // how many pages or li show before the current li
+                if (page == totalPages) {
+                    beforePage = beforePage - 2;
+                } else if (page == totalPages - 1) {
+                    beforePage = beforePage - 1;
+                }
+                // how many pages or li show after the current li
+                if (page == 1) {
+                    afterPage = afterPage + 2;
+                } else if (page == 2) {
+                    afterPage = afterPage + 1;
+                }
+
+                for (var plength = beforePage; plength <= afterPage; plength++) {
+                    if (plength > totalPages) { //if plength is greater than totalPage length then continue
+                        continue;
+                    }
+                    if (plength == 0) { //if plength is 0 than add +1 in plength value
+                        plength = plength + 1;
+                    }
+                    if (page == plength) { //if page is equal to plength than assign active string in the active variable
+                        active = "active";
+                    } else { //else leave empty to the active variable
+                        active = "";
+                    }
+                    liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+                }
+
+                if (page < totalPages - 1) { //if page value is less than totalPage value by -1 then show the last li or page
+                    if (page < totalPages - 2) { //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+                        liTag += `<li class="dots"><span>...</span></li>`;
+                    }
+                    liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+                }
+
+                if (page < totalPages) { //show the next button if the page value is less than totalPage(20)
+                    liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
+                }
+                element.innerHTML = liTag; //add li tag inside ul tag
+                return liTag; //reurn the li tag
+            }
+    </script>
+</body>

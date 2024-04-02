@@ -1,0 +1,450 @@
+<body class="g-sidenav-show  bg-gray-200">
+    {{!-- Sidebar --}}
+    <aside
+        class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
+        id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="#">
+                <h6 class="font-weight-bold text-white">Alumni Management System</h6>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../dashboard">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">dashboard</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Bảng điều khiển</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Quản lý
+                    </h6>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../users">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">manage_accounts</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Phê duyệt tài khoản</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="../alu">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">groups</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Cựu sinh viên</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="../jobs">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">list_alt</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Bài đăng tuyển dụng</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-primary" href="../events">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">event</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Sự kiện</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">forum</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Diễn đàn</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">collections</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Thư viện ảnh</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Thông tin cá
+                        nhân
+                    </h6>
+                </li>
+                {{#if currentUser}}
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person</i>
+                        </div>
+                        <span class="nav-link-text ms-1">{{currentUser.email}}</span>
+                    </a>
+                </li>
+                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="#">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">notifications</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Thông báo</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/api/admin/logout">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">login</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Đăng xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+            data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="../dashboard">
+                                Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="../events">
+                                Danh sách sự kiện</a>
+                        </li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">
+                            Tạo mới sự kiện
+                        </li>
+                    </ol>
+                    <h4 class="font-weight-bolder mb-0">{{title}}</h4>
+                </nav>
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                        <div class="input-group input-group-outline">
+                            <label class="form-label">Tìm kiếm...</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <ul class="navbar-nav  justify-content-end">
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown pe-2 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell cursor-pointer"></i>
+                            </a>
+                            <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4"
+                                aria-labelledby="dropdownMenuButton">
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../img/avatars/din.jpg" class="avatar avatar-sm  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">Tin nhắn mới</span> từ Din
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    13 phút trước
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../img/avatars/default-user.jpg"
+                                                    class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">Tài khoản mới</span> yêu cầu phê
+                                                    duyệt
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    1 ngày trước
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../img/avatars/user-1.jpg"
+                                                    class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">Admin Nam Đoàn</span> đã đăng bài
+                                                    tuyển dụng
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    1 tuần trước
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{#if currentUser}}
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="#" class="nav-link text-body font-weight-bold px-0">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span class="d-sm-inline d-none"> {{currentUser.fullname}}</span>
+                            </a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">Tạo mới sự kiện
+                            </div>
+                            <div class="form-info card-body px-0 pb-2">
+                                <form method="post" action="./create" enctype="multipart/form-data">
+                                    <div class="table-responsive ps-4 row">
+                                        <div class="row gutters">
+                                            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                                                <div class="row">
+                                                    {{!-- Row 1 --}}
+                                                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 mb-3">
+                                                        <label for="event_title" class="form-label text-sm">Tiêu đề
+                                                            sự kiện</label>
+                                                        <textarea class="form-control text-sm px-3" id="event_title"
+                                                            name="event_title" rows="2" required></textarea>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="event_tag">Nhãn</label>
+                                                        <select class="form-select text-sm px-3" id="event_tag" required
+                                                            name="event_tag">
+                                                            <option value="" selected>--Chọn--</option>
+                                                            <option value="Công nghệ"> Công nghệ </option>
+                                                            <option value="AI"> AI </option>
+                                                            <option value="Điện tử viễn thông"> Điện tử viễn thông
+                                                            </option>
+                                                            <option value="Game/Trò chơi điện tử"> Game/Trò chơi
+                                                                điện tử </option>
+                                                            <option value="Thiết bị thông minh-IoT"> Thiết bị thông
+                                                                minh-IoT </option>
+                                                            <option value="WorkShop"> WorkShop </option>
+                                                            <option value="TalkShow"> TalkShow </option>
+                                                            <option value="Triển lãm"> Triển lãm </option>
+                                                        </select>
+                                                    </div>
+                                                    {{!-- Row 2 --}}
+                                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="start_date">Ngày bắt
+                                                            đầu</label>
+                                                        <div class="input-group">
+                                                            <input type="date" class="form-control text-sm px-3"
+                                                                id="start_date" name="start_date" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="end_date">Ngày kết
+                                                            thúc</label>
+                                                        <div class="input-group">
+                                                            <input type="date" class="form-control text-sm px-3"
+                                                                id="end_date" name="end_date" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="start_time">Giờ diễn ra</label>
+                                                        <div class="input-group">
+                                                            <input type="time" class="form-control text-sm px-3"
+                                                                id="start_time" name="start_time" required>
+                                                        </div>
+                                                    </div>
+                                                    {{!-- Row 2 --}}
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="contact_tel">Số
+                                                            điện
+                                                            thoại</label>
+                                                        <input type="number" class="form-control text-sm  px-3"
+                                                            id="contact_tel" name="contact_tel"
+                                                            pattern="[0-9]{10}">
+                                                    </div>
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="contact_email">Email
+                                                            liên
+                                                            lạc</label>
+                                                        <input type="email" class="form-control text-sm px-3"
+                                                            id="contact_email" name="contact_email">
+                                                    </div>
+                                                    {{!-- Row 3 --}}
+                                                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="location">Địa điểm tổ
+                                                            chức</label>
+                                                        <input type="text" class="form-control text-sm px-3"
+                                                            id="location" name="location" required>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
+                                                        <label class="form-label text-sm" for="province">Tỉnh/Thành phố</label>
+                                                        <input type="text" class="form-control text-sm px-3"
+                                                            id="province" name="province" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{!-- Banner --}}
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <div class="col-12">
+                                                            <h5>Ảnh bìa sự kiện</h5>
+                                                            <h6 class="mb-3 text-primary text-start">Chọn ảnh bìa
+                                                            </h6>
+                                                        </div>
+                                                        <div class="event-settings">
+                                                            <div class="event-profile">
+                                                                <div class="event-avatar">
+                                                                    <div class="image-area rounded" id="image-area"
+                                                                        style="display: none;"
+                                                                        onclick="document.getElementById('upload').click();">
+                                                                        <input id="upload" type="file"
+                                                                            name="file_upload" onchange="readURL(this);"
+                                                                            accept="image/*">
+                                                                        <img id="imageResult" src="#" alt=""
+                                                                            class="img-fluid rounded">
+                                                                    </div>
+
+                                                                    <div class="image-thumnail rounded"
+                                                                        id="thumnail-area"
+                                                                        onclick="document.getElementById('upload').click();">
+                                                                        <img src="../assets/img/icons/photo.png"
+                                                                            width="64px" height="64px" id="thumbnail"
+                                                                            alt="" class="img-fluid">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="title-change">
+                                                                    <h6 class="text-muted ">Click vào để thay đổi ảnh
+                                                                        </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            {{!-- Description --}}
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
+                                                <label for="description" class="form-label text-sm">Mô
+                                                    tả</label>
+                                                <textarea class="form-control text-sm px-3" id="description"
+                                                    name="description" rows="3"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="row gutters mt-4">
+                                            <div class="col-12">
+                                                <div class="d-flex justify-content-end">
+                                                    <button class="btn btn-primary text-white" type="submit">
+                                                        <i class="material-icons opacity-10">edit_calendar</i>
+                                                        <span>Tạo mới</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="footer py-4  ">
+                        <div class="container-fluid">
+                            <div class="row align-items-center justify-content-lg-between">
+                                <div class="col-lg-6 mb-lg-0 mb-4">
+                                    <div class="copyright text-center text-sm text-muted text-lg-start">
+                                        © Copyright
+                                        <script>
+                                            document.write(new Date().getFullYear())
+                                        </script> Ton Duc Thang University.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+    </main>
+
+
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+
+        ClassicEditor
+            .create(document.querySelector('#description'))
+            .catch(error => {
+                console.error(error);
+            });
+
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imageResult').attr('src', e.target.result);
+                    $('#image-area').attr('style', 'display: block;');
+                    $('#thumnail-area').attr('style', 'display: none;');
+
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $(function () {
+            $('#upload').on('change', function () {
+                readURL(input);
+            });
+        });
+
+    </script>
+</body>

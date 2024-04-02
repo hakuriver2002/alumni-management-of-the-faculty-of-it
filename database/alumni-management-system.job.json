@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "65f5c2ea1f69118f3949ad89"
+  },
+  "job_title": "Senior Backend Developer",
+  "company": "QUANTier",
+  "location": "Hà Nội",
+  "skill_tag": [
+    "SQL",
+    "Python",
+    "Python"
+  ],
+  "salary": 5000000,
+  "description": "<p><strong>Company Overview:</strong></p><p>QUANTier, based in Hong Kong, is a pioneering company at the forefront of technological&nbsp;advancement. We are dedicated to developing a scalable middleware solution to empower the&nbsp;world with quantum research and applications. With a highly skilled team of software developers&nbsp;and quantum PhDs, we are committed to achieving our goals.</p><p><strong>Role Overview:</strong></p><p>As a Senior Backend Developer (Python), you will play a crucial role in leading the software&nbsp;engineering team at QUANTier. You will be responsible for designing, developing, and implementing&nbsp;middleware solutions that contribute to the success of our mission. You will ensure the delivery of a&nbsp;high-quality, scalable, and robust backend system. Your technical expertise and leadership skills will&nbsp;allow you to make a significant impact on the quantum computing industry.</p>",
+  "post_at": {
+    "$date": "2024-03-16T16:03:54.679Z"
+  },
+  "created_at": {
+    "$date": "2024-03-16T16:03:54.682Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-16T16:03:54.682Z"
+  },
+  "__v": 0,
+  "website_link": "www.QUANTier.com"
+},
+{
+  "_id": {
+    "$oid": "65f5c3431f69118f3949ad8c"
+  },
+  "job_title": "NodeJS / PHP DEVELOPER",
+  "company": "TopDev's",
+  "location": "Hà Nội",
+  "skill_tag": [
+    "PHP",
+    "ReactJS"
+  ],
+  "salary": 7500000,
+  "description": "<p>As an IC Design Engineer, you will be responsible for analog layout design from block level, up to top level IC integration and physical verification for advanced ASIC in MEMS sensor.</p><p>- You will work with international design team to ensure the layout delivery on time and in quality, then execute whole tape-out flow together with wafer foundry.</p><p>- You will Work with digital backend engineer to generate DFE file for P&amp;R and integrated digital layout into whole chip.</p><p>- You will also work with CAD engineers to continuously improve our PDKs and design environment.</p>",
+  "post_at": {
+    "$date": "2024-03-16T16:05:23.310Z"
+  },
+  "created_at": {
+    "$date": "2024-03-16T16:05:23.311Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-16T16:05:23.311Z"
+  },
+  "__v": 0,
+  "website_link": "www.TopDev.com"
+},
+{
+  "_id": {
+    "$oid": "65f5c3ef1f69118f3949ad91"
+  },
+  "job_title": "[Hybrid working] Senior Java Developer",
+  "company": "CÔNG TY TNHH BOSCH GLOBAL SOFTWARE TECHNOLOGIES",
+  "location": "Quận 3, Hồ Chí Minh",
+  "skill_tag": [
+    "Java"
+  ],
+  "salary": 11000000,
+  "description": "<h3><strong>Mô tả công việc</strong></h3><p>Join the development of the largest CPA affiliate platform in Vietnam and Southeast Asia. Develop new functions and maintain the product of the company (ACCESSTRADE) according to the details below:<br>&nbsp;</p><p>• Develop backend and frontend features in Java and Angular</p><p>• Write automated unit and integration tests</p><p>• Use scrum in your everyday development work</p><p>• Create and maintain software components in a DevOps fashion</p><p>• Maintain the system's infrastructure in AWS</p><h3><strong>Yêu cầu ứng viên</strong></h3><p>• Minimum 1 year of web application development experience with Java</p><p>• Experience in development using Git is plus point</p><p>• English (Reading/writing)</p><h3><strong>Quyền lợi</strong></h3><p>• Basic salary: Up to 1500$ or Negotiate based on experience</p><p>• Salary review: Twice a year</p><p>• Bonus policy: Tet Bonus (13th-month Salary)</p><p>• Allowance: Parking allowance, meal allowance</p><p>• Insurance: Social insurance, Unemployment insurance, health insurance: under applicable law. Premium insurance after 1 year of working</p><p>• Working environment: young team, Tea break, birthday party, team building, company trip</p><p>• In-house training on development best practices, like AI, Clean Code, and unit testing</p><p>• Having MACHINE LEARNING training and join the exciting global project</p>",
+  "post_at": {
+    "$date": "2024-03-16T16:08:15.189Z"
+  },
+  "created_at": {
+    "$date": "2024-03-16T16:08:15.189Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-16T16:08:15.189Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f5c4491f69118f3949ad97"
+  },
+  "job_title": "XAML Blender",
+  "company": "CÔNG TY TNHH YRISM VN",
+  "location": "Thành phố Thủ Đức, Hồ Chí Minh",
+  "skill_tag": [
+    "OOP",
+    "Embedded"
+  ],
+  "salary": 8900000,
+  "description": "<h2><strong>Trách nhiệm công việc</strong></h2><ul><li>Design and implement intuitive and visually appealing user interfaces using WPF XAML.</li><li>Design, develop, and maintain WPF user controls that align with the overall application architecture.</li><li>Must be able to convert design image to XAML using Blend (the XAML designer).</li><li>Collaborate with UX/UI designers to implement design specifications.</li></ul><h2><strong>Kỹ năng &amp; Chuyên môn</strong></h2><ul><li>Microsoft Blend for Visual Studio 2022 experience&nbsp;</li><li>Photoshop, Figma and Miro experience&nbsp;</li><li>DevOps Management</li><li>Experience Design department graduates preferred</li></ul><h2><strong>Phúc lợi dành cho bạn</strong></h2><ul><li>13th month salary</li><li>12 days annual leave per year</li><li>All standard Vietnam calendar holidays</li><li>Annual salary review</li><li>Great location with shops, restaurants, gym, cafes and swimming pool in the building.</li><li>Nice and friendly working environment</li><li>Work directly with international clients.</li></ul>",
+  "post_at": {
+    "$date": "2024-03-16T16:09:45.121Z"
+  },
+  "created_at": {
+    "$date": "2024-03-16T16:09:45.122Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-16T16:09:45.122Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f80435f53c36182983f188"
+  },
+  "job_title": "Frontend Developer (ReactJs/ NextJs) ",
+  "company": " Humax Vietnam",
+  "location": "Handico Tower, Pham Hung street, Nam Tu Liem, Ha Noi",
+  "skill_tag": [],
+  "salary": 40000000,
+  "description": "<h3><strong>Mô tả công việc</strong></h3><p><strong>General Description</strong></p><p>You will be a part of an international development team developing tomorrow’s web applications.</p><p>Building IoT software that allows control and monitoring of all types of devices and physical, virtual, and network management...</p><p>Building a new mobility ecosystem with slots management in the parking lot, find my car...</p><p>Analyze issues with various tools and knowledge and find right solutions</p><p>&nbsp;</p><p><strong>Essential Duties and Responsibilities</strong></p><p>- Deliver products with high responsibility, availability, scalability, security, and maintainability</p><p>- Collaborate with the team to clarify and analyze project requirements.</p><p>- Translate UI/UX designs and business requirements into high-quality, well-tested, clean, simple, and maintainable code.</p><p>- Resolve any technical issues, risks, and challenges, escalating as necessary and providing solutions.</p><p>- Ensure that developed applications are well documented, tested, easy to maintain, and meet industry standards</p><h3><strong>Yêu cầu ứng viên</strong></h3><p><strong>1.Work Experience</strong></p><ul><li>At least <strong>3-5+ years hands-on experience</strong> in below languages, frameworks and libraries :<ul><li>NextJS, ReactJS</li><li>Javascript &amp; Typescript (&gt;= ES6)</li><li>HTML, CSS3, Bootstrap/Tailwind CSS</li><li>RESTful API, Socket</li></ul></li><li>Familiar with:<ul><li>Webpack, Eslint</li><li>Yarn, Npm/Pnpm</li><li>Figma/ Zeplin</li><li>Docker</li><li>Git (Github / Gitlab)</li><li>Postman</li><li>JIRA, Slack</li></ul></li><li>Build reusable components/modules for future use.</li><li>Clear understanding of server side rendering, client side rendering and static site generation</li><li>Experience in responsive UI: know how to make sure the UI works in multiple resolutions, know how to make sure the UI is rendered fast on mobile.</li><li>Collaborate with Back-end developers to integrate user-facing elements with server-side logic.</li><li><strong>Experience in building Restful API in NodeJs (Express/NestJs/KoaJs) and communicating with Database(Mysql/Postgres, MongoDB, Redis)</strong></li><li>Good problem solving, organizational and time management skills</li><li>Keen on learning new tech stacks and frameworks</li></ul><p><strong>2. Knowledge</strong></p><ul><li>Have strong interest and basic understanding in AI tools such as ChatGPT &amp; Copilot</li><li>[Essential] Know how to write clean and efficient code, reivew code</li><li>[Essential] Process of Code Versioning (SVN, Git)</li><li>[Preference] Knowledge of Agile Scrum development process is a plus</li><li>[Preference] Understanding of software development process and design</li></ul><p><strong>3.Skills and attitude</strong></p><ul><li>Good Written English skill, Verbal English Communication is a big plus</li><li>Good problem-solving skills, thorough, sincere, responsible, understanding mindset</li><li>Logical thinking required as an engineer.</li><li>Experience working independently and as part of a team. Active communication internal<i>ly and externally</i></li></ul><h3><strong>Quyền lợi</strong></h3><p><strong>Benefits</strong></p><ul><li>Salary will be negotiated depends on your competency</li><li>Competitive compensation package (Basic salary, Monthly Allowance, Performance incentive, Profit Sharing) - <strong>Up to 15-16 monthly salary/year</strong></li><li>Attractive benefits (SHUI Insurance, PTI Premium Health Care Insurance <strong>full sponsored for both you and your family</strong>)</li><li>Team-building Support Bonus quarterly</li><li><strong>100% official salary</strong> during the probation period, annual salary raise</li><li><strong>Extra bonus</strong> per special occasions (Birthday, Labor Day, National Day, Solar New year, Lunar New Year)</li><li>Annual company outing trip/travel benefit</li></ul><p><br><strong>Working environment</strong></p><ul><li>5 working days/week with <strong>flexible working time</strong> and no overtime</li><li><strong>Chance to go on business trip oversea</strong></li><li>English working environment: You will have chance to practice English in both 4 skills.</li><li>Internal English Class full sponsored by Company</li><li>Professional, creative, comfortable and flexible working environment</li><li>Young and talented colleagues with nice and supportive leader</li><li>Chance to develop career with clear and motivated performance management system</li><li>Common cultural-sportive Clubs and activities, sponsored and/or supported by the Company</li></ul>",
+  "post_at": {
+    "$date": "2024-03-18T09:07:01.242Z"
+  },
+  "created_at": {
+    "$date": "2024-03-18T09:07:01.247Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:07:01.247Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f80502f53c36182983f18e"
+  },
+  "job_title": "Thực Tập Sinh Backend Developer",
+  "company": "CÔNG TY CỔ PHẦN TANCA",
+  "location": "217/4 Nơ Trang Long, Phường 12, Quận Bình Thạnh, TP. HCM",
+  "skill_tag": [
+    "Javascript"
+  ],
+  "salary": 3000000,
+  "description": "<h3><strong>Mô tả công việc</strong></h3><p>- Tiếp cận và sử dụng công nghệ thịnh hành trong mảng Backend &amp; DevOps như: NodeJS, NestJS, Docker, Amazon Web Services.</p><p>- Tham gia vào một project thực tế, phát triển software product đi từ nhu cầu thực, quan tâm đến business goals &amp; user experience.</p><p>- Tham gia quy trình phát triển product hoàn chỉnh, từ giai đoạn phân tích, lên ý tưởng đầu tiên, đến thiết kế, phát triển và hoàn thành sản phẩm: Analysis - Design - Implementation – Operations.</p><p>- Lập trình các chức năng được giao theo tài liệu giải pháp chi tiết.</p><p>- Thực hiện thiết kế, coding, testing các module</p><p>- Nghiên cứu, tìm hiểu các công nghệ mới để áp dụng cải thiện sản phẩm.</p><p>- Coach liên tục review và unblock, giúp bạn nhanh chóng phát triển kỹ năng chuyên môn về cả chiều rộng và chiều sâu.</p><p>- Coach đồng hành hướng dẫn từ kiến thức lập trình đến cách làm việc, từ đó có thể hình thành tư duy làm product.</p><p>- Học cách làm chủ công nghệ hơn là chỉ code &amp; nắm rõ các tiêu chuẩn lập trình.</p><p>- Áp dụng và rèn luyện các kỹ năng mềm thiết yếu trong công việc: Communication, Teamwork, Project Management.</p><p>- Có cơ hội tìm hiểu và phát triển thêm về kiến thức chuyên môn và cách ứng dụng, thông qua việc tham gia các Technical Workshop diễn ra hằng tháng.</p><h3><strong>Yêu cầu ứng viên</strong></h3><p>- Sinh viên đang theo học ngành IT tại các trường Đại học.</p><p>- Chủ động, đam mê công việc, sẵn sàng chấp nhận thách thức.</p><p>- Thích học hỏi công nghệ mới, nghiên cứu và xây dựng mô hình hàng trăm nghìn người dùng mỗi ngày.</p><h3><strong>Quyền lợi</strong></h3><p>- Lương cứng: 3.000.000đ/tháng (khi đạt hiệu quả công việc)</p><p>- Thưởng OKR theo hiệu suất làm việc và thưởng theo năng lực làm việc</p><p>- Cơ hội phát triển lên các level cao hơn</p><p>- Vì sản phẩm của Tanca là phần mềm quản lý nhân sự nên chúng tôi luôn hướng đến giá trị làm sao để nhân sự của mình được hạnh phúc nhất khi đi làm, chính vì thế tại Tanca quyền lợi nhân sự luôn được ưu tiên hàng đầu</p><p>- Hơn một nửa đội ngũ nhân sự là genZ với tính cách năng động, dễ hoà nhập, nhiệt huyết, luôn sẵn sàng bùng cháy trong công việc và không để bất kì một nhân sự nào cảm thấy cô đơn, lạc lõng</p><p>- Bạn có thể dễ dàng nói ra tâm tư nguyện vọng của mình đóng góp ý kiến cho Ban Lãnh Đạo sẵn sàng thay đổi để tốt hơn mà không phải lo ngại về khoảng cách giữa cấp trên và cấp dưới</p><p>- Chúng tôi đánh giá nhân sự dựa trên nhiều tiêu chí từ thái độ, phong cách và quá trình làm việc chứ không chỉ nhìn vào con số</p><p>- Chúng tôi luôn sát cánh trong quá trình trưởng thành của bạn qua Performance Review 1-2 lần/năm</p><p>- Một môi trường startup Công nghệ và Global tiến luôn trong trạng thái phát triển và đổi mới sẽ cho bạn nhiều trải nghiệm và kiến thức qua từng ngày</p><p>- Hoạt động nội bộ và chương trình đào tạo hàng tháng nhằm gắn kết và nâng cao tinh thần teamwork, phấn đấu phát triển cùng nhau</p>",
+  "post_at": {
+    "$date": "2024-03-18T09:10:26.150Z"
+  },
+  "created_at": {
+    "$date": "2024-03-18T09:10:26.152Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:10:26.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f806bef53c36182983f1b3"
+  },
+  "job_title": "Intern Backend Python",
+  "company": "CYDEVA TECHNOLOGY SOLUTIONS",
+  "location": "- Hồ Chí Minh: 79 Ta Hien Street, District 2, Ho Chi Minh City, Vietnam, Quận 2",
+  "skill_tag": [
+    "Python",
+    "Python"
+  ],
+  "salary": 1500000,
+  "description": "<h3><strong>Mô tả công việc</strong></h3><ul><li>Tham gia trực tiếp vào các dự án nghiên cứu và phát triển sản phẩm phần mềm của Công ty bằng ngôn ngữ Python và framework Django sử dụng DB là MySQL, PostgreSQL.</li><li>Thiết kế và tạo các RESTful APIs.</li><li>Tham gia vào việc kiến trúc, thiết kế và xây dựng sản phẩm trong môi trường linh động giàu sức sáng tạo cùng với đội ngũ phát triển nhiều kinh nghiệm.</li></ul><h3><strong>Yêu cầu ứng viên</strong></h3><ul><li>Có ít nhất 06 tháng kinh nghiệm làm việc với Django framework.</li><li>Có kinh nghiệm làm việc với database : MySQL, PostgreSQL, NoSQL...</li><li>Có kiến thức về việc xây dựng và sử dụng RESTful APIs.</li><li>Hiểu rõ về các công cụ như git, postman.</li><li>Có kinh nghiệm triển khai các ứng dụng được xây dựng bằng Python.</li><li>Kỹ năng giải quyết vấn đề tốt với cách tiếp cận logic và phân tích hợp lý.</li><li>Có khả năng làm việc nhóm, yêu thích tìm hiểu, nghiên cứu công nghệ mới và có ý chí vươn lên.</li><li>Có khả năng tự học và tự nghiên cứu những công nghệ mới.</li></ul><h3><strong>Quyền lợi</strong></h3><ul><li>Young, dynamic, teamwork working environment, regularly organizing events.</li></ul>",
+  "post_at": {
+    "$date": "2024-03-18T09:17:50.831Z"
+  },
+  "created_at": {
+    "$date": "2024-03-18T09:17:50.833Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:17:50.833Z"
+  },
+  "__v": 0,
+  "website_link": "www.cydeva.com"
+},
+{
+  "_id": {
+    "$oid": "65f80711f53c36182983f1b9"
+  },
+  "job_title": "Lập Trình Viên PHP",
+  "company": "CÔNG TY TNHH ĐẦU TƯ XUẤT NHẬP KHẨU VẬN TẢI HOÀNG MINH",
+  "location": "115 DD7, Phường Tân Hưng Thuận, Quận 12, Tp. Hồ Chí Minh",
+  "skill_tag": [
+    "PHP"
+  ],
+  "salary": 12000000,
+  "description": "<h3><strong>Mô tả công việc</strong></h3><p>• Lập trình và phát triển ứng dụng web, sản phẩm phần mềm trên nền tảng PHP.</p><p>• Nghiên cứu, phát triển và ứng dụng các công nghệ mã nguồn mở vào trong dự án.</p><p>• Kết hợp với các bộ phận liên quan (Kiểm thử, hệ thống...) trong quá trình phát triển dự án.</p><p>• Thực hiện các công việc và báo cáo theo yêu cầu của cấp quản lý.</p><p>• Tham gia vào toàn bộ quá trình phát triển sản phẩm phần mềm, thiết kế website, phát triển API cho ứng dụng.</p><p>• Xử lý xuyên suốt quá trình phát triển sản phẩm, dự đoán và sửa chữa các vấn đề gặp phải.</p><p>• Quản trị hiệu năng, kiểm tra và review code, đóng góp cho sự cải thiện của hệ thống kỹ thuật.</p><p>• Tích cực đóng góp những kinh nghiệm, ý tưởng cũng như giải pháp tốt nhất cho việc phát triển dự án.</p><p>• Ngôn ngữ lập trình: PHP (Framework sử dụng: Laravel, Code Igniter), css, javascript (jquery), bootstrap.</p><h3><strong>Yêu cầu ứng viên</strong></h3><p>• Tốt nghiệp Cao Đẳng hoặc Đại học chuyên ngành Công nghệ thông tin</p><p>• Ít nhất 2 năm kinh nghiệm lập trình backend bằng ngôn ngữ PHP, ưu tiên các ứng viên có kinh nghiệm với Laravel Framework, Code Igniter, RestFul API.</p><p>• Có kinh nghiệm làm việc với Third party như eInvoice, Payment, VoIP...</p><p>• Ưu tiên các ứng viên kinh nghiệm với các sản phẩm CRM, Retail, POS</p><p>• Có khả năng làm việc trong môi trường áp lực cao.</p><p>• Đề cao trách nhiệm trong công việc, ý thức cao về chất lượng sản phẩm.</p><p>• Có kinh nghiệm quản lý đội nhóm là một lợi thế.</p><h3><strong>Quyền lợi</strong></h3><p>• Lương tháng 13, tăng lương theo năng lực, theo định kỳ.</p><p>• Tham gia BHXH, BHYT, BHTN theo quy định luật lao động</p><p>• Lương tháng 13, thưởng các dịp Lễ, Tết, sinh nhật,...</p><p>• Phụ cấp ăn trưa, chi phí gửi xe.</p><p>• Du lịch, nghỉ dưỡng hằng năm theo chính sách của công ty.</p><p>• Có nhiều cơ hội thăng tiến trong công việc.</p><p>Địa điểm làm việc</p>",
+  "post_at": {
+    "$date": "2024-03-18T09:19:13.578Z"
+  },
+  "created_at": {
+    "$date": "2024-03-18T09:19:13.580Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:19:13.580Z"
+  },
+  "__v": 0
+}]

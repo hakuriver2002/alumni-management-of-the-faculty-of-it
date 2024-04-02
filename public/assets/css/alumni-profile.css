@@ -1,0 +1,296 @@
+:root {
+    --primary: #F4BD50;
+    --white: #fff;
+    --background: #191919;
+    --background-detail: #d5d6d8;
+    --gray: #D3D3D3;
+    --text: #262626;
+    --like: #FF3040;
+    --background-button: #C07F00;
+    --text-button: #FFF7D4;
+    --ctn-white: #F7F9FB;
+    --ctn-white-blue: #8FC1E3;
+    --ctn-blue-dark: #5085A5;
+    --ctn-blue: #31708E;
+    --ctn-black: #687864;
+    --linkedin: #0A66C2;
+    --github: #f7f7f7;
+    --facebook: #3b5998;
+    
+
+}
+
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+.content {
+    width: 100%;
+    background-color:  var(--background-detail);
+}
+
+.content section {
+    padding: 6rem 0 7rem;
+}
+.content-section .title {
+    font-size: 20px;
+    font-weight: 200;
+
+}
+
+.alumni-profile-section .container {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    padding-top: 10px;
+}
+
+.alumni-profile-section .container .alumni-left {
+    width: 30%;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+    background-color: var(--ctn-white);
+    height: fit-content;
+}
+.alumni-profile-section .container .alumni-left .alumni-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.alumni-card {
+    position: relative;
+    height: fit-content;
+}
+.alumni-card .alumni-info {
+    display: flex;
+}
+.alumni-card .alumni-info .alumni-name {
+    display: flex;
+    flex-direction: column;
+}
+.alumni-card .alumni-info img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--ctn-white);
+    object-fit: contain;
+    width: 80px;
+    height: 80px;
+}
+.alumni-card .alumni-info h3 {
+    font-size: 1.275rem;
+    text-transform: none;
+    font-weight: 400;
+    color: var(--text);
+    padding-left: 10px;
+    margin: 0;
+    line-height: 28px;
+}
+.alumni-card .alumni-info h5 {
+    font-size: .75rem;
+    text-transform: none;
+    font-weight: 300;
+    color: var(--ctn-black);
+    padding-left: 15px;
+    margin: 0;
+    line-height: 28px;
+}
+.alumni-card .alumni-dsc {
+    display: flex;
+    justify-content: space-between;
+}
+.alumni-dsc h3 {
+    font-size: 1.155rem;
+    text-transform: none;
+    font-weight: 300;
+    color: var(--gray);
+    padding-left: 5px;
+    margin: 0;
+    line-height: 28px;
+}
+.alumni-dsc h4 {
+    font-size: 1.1rem;
+    text-transform: none;
+    font-weight: 500;
+    color: var(--text);
+    padding-left: 15px;
+    margin: 0;
+    line-height: 28px;
+}
+.alumni-dsc p {
+    font-size: .75rem;
+    text-transform: none;
+    font-weight: 300;
+    color: var(--text);
+    text-align: justify;
+    letter-spacing: .025rem;
+    line-height: 28px;
+}
+.alumni-card .alumni-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.alumni-social .social-media-button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    outline: 2px solid black;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+    background: var(--white);
+}
+
+.alumni-social .social-media-button:hover {
+    outline-offset: 3px;
+    transition: all 0.3s;
+}
+
+.alumni-social .social-media-button img {
+    transition: all 0.3s;
+}
+
+.alumni-social .social-media-button:hover img {
+    transform: scale(1.15);
+}
+
+.alumni-social .social-media-button:hover:nth-child(1) {
+    background: var(--facebook);
+}
+
+.alumni-social .social-media-button:hover:nth-child(2) {
+    background: var(--ctn-blue);
+}
+
+.alumni-social .social-media-button:hover:nth-child(3) {
+    background: var(--linkedin);
+}
+.alumni-card .alumni-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--ctn-blue-dark);
+    padding: 10px;
+}
+.alumni-chat a {
+    color: var(--ctn-white);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+}
+.alumni-chat a:hover {
+    color: var(--text);
+}
+.alumni-chat:hover {
+    background-color: var(--ctn-blue);
+}
+
+.alumni-profile-section .container .alumni-right {
+    width: 65%;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+    margin-left: 50px;
+    background-color: var(--ctn-white);
+}
+.alumni-profile-section .alumni-right .alumni-card {
+    position: relative;
+    height: fit-content;
+}
+.alumni-right .alumni-card .alumni-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    left: 0;
+}
+.alumni-right .alumni-card .alumni-title .alumni-chat-btn {
+    background-color: var(--ctn-white-blue);
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alumni-right .alumni-card .alumni-title .alumni-chat-btn a {
+    color: var(--ctn-blue-dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: .75px;
+}
+.alumni-right .alumni-card .alumni-title .alumni-chat-btn:hover {
+    background-color: var(--ctn-blue);
+    
+}
+.alumni-right .alumni-card .alumni-title .alumni-chat-btn a:hover {
+    color: var(--ctn-white);
+}
+.alumni-right .alumni-card .alumni-basic-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    
+}
+.alumni-right .alumni-card .alumni-basic-title h2 {
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-decoration: none;
+    margin-left: 0px;
+    text-align: center;
+}
+.alumni-basic-title .alumni-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    /*  */
+    text-align: center;
+    
+}
+.alumni-name-properties {
+    font-size: 15px;
+    color: var(--gray);
+    text-align: justify;
+    font-weight: 300;
+    letter-spacing: .5px;
+    text-align: center;
+    width: 60%;
+    margin-left: 3rem;
+}
+.alumni-content .alumni-name {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: -2rem;
+}
+.alumni-content .alumni-name h3 {
+    font-size: 16px;
+    color: var(--text);
+    font-weight: 300;
+    letter-spacing: .5px;
+    text-align: center;
+}
+

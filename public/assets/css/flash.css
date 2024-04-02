@@ -1,0 +1,151 @@
+:root {
+    --notification-background_1: #D1E7DD;
+    --notification-primary_1: #0F5132;
+    --notification-background_2: #FFF3CD;
+    --notification-primary_2: #664D03;
+    --notification-background_3: #F8D7DA;
+    --notification-primary_3: #842029;
+}
+
+.notification_success {
+    position: fixed;
+    width: max-content;
+    left: 0; 
+    right: 0; 
+    top: 2rem;
+    margin-left: auto; 
+    margin-right: auto; 
+    border-radius: 0.375rem;
+    background-color: var(
+        --notification-background_1);
+    color: var(--notification-primary_1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(1.875rem);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 3s linear;
+    z-index: 1000;
+}
+
+.notification_warning {
+    position: fixed;
+    width: max-content;
+    left: 0; 
+    right: 0; 
+    top: 2rem;
+    margin-left: auto; 
+    margin-right: auto; 
+    border-radius: 0.375rem;
+    background-color: var(
+        --notification-background_2);
+    color: var(--notification-primary_2);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(1.875rem);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 3s linear;
+    z-index: 1000;
+}
+
+.notification_error {
+    position: fixed;
+    width: max-content;
+    left: 0; 
+    right: 0; 
+    top: 2rem;
+    margin-left: auto; 
+    margin-right: auto; 
+    border-radius: 0.375rem;
+    background-color: var(
+        --notification-background_3);
+    color: var(--notification-primary_3);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(1.875rem);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 3s linear;
+    z-index: 1000;
+}
+
+.notification__icon {
+    height: 1.625rem;
+    width: 1.625rem;
+    margin-right: 0.25rem;
+    color: var(--notification-background);
+}
+
+.notification__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 0.5rem;
+}
+
+.notification__progress_1 {
+    position: absolute;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    width: calc(100% - 0.5rem);
+    height: 0.2rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(
+        to right, 
+        var(--notification-background_1),  
+        var(--notification-primary_1)
+    );
+    border-radius: inherit;
+    animation: progress 2.5s 0.3s linear;
+}
+
+.notification__progress_2 {
+    position: absolute;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    width: calc(100% - 0.5rem);
+    height: 0.2rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(
+        to right, 
+        var(--notification-background_2),  
+        var(--notification-primary_2)
+    );
+    border-radius: inherit;
+    animation: progress 2.5s 0.3s linear;
+}
+
+.notification__progress_2 {
+    position: absolute;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    width: calc(100% - 0.5rem);
+    height: 0.2rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(
+        to right, 
+        var(--notification-background_3),  
+        var(--notification-primary_3)
+    );
+    border-radius: inherit;
+    animation: progress 2.5s 0.3s linear;
+}
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes progress {
+    to {
+        transform: scaleX(1);
+    }
+}

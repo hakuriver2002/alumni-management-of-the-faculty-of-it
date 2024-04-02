@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> {{title}} </title>
+    <link rel="shortcut icon" href="./img/logo_tdtu.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/job.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/alumni.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{> header-1}}
+</head>
+
+<body>
+    <div class="content">
+        {{!-- Flash message --}}
+        {{#if messageSuccess}}
+        <div class="position-absolute top-0 end-0" style="z-index: 1000; margin: 100px 38px" id="success-alert">
+            <div class="col-lg-10 mx-auto mb-3 w-auto">
+                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2 mr-3" width="24" height="24" role="img" aria-label="Warning:">
+                        <use xlink:href="#check-circle-fill" />
+                    </svg>
+                    <div> {{ messageSuccess }} </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- Alumini website --}}
+        <section class="alumni-section" id="alumni">
+            <div class="container">
+                <div class="content-section">
+                    <div class="title">
+                        <h1>Danh sách cựu sinh viên</h1>
+                    </div>
+                    <div class="search-alumni">
+                        <input type="text" spellcheck="false" id="findAlumni" onkeyup="searchBox()"
+                            placeholder="Tìm kiếm cựu sinh viên">
+                        <button class="btn-find">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="cards" id="alumni_card">
+                    {{#each alumnus}}
+                    <article class="card">
+                        <a href="#" class="alumus">
+                            <div class="card__preview">
+                                <img src="./uploads/avatar/{{avatar_url}}" alt="avatar"> 
+                                <div class="card__date">
+                                    {{ batch }}
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card__content">
+                            <a href="alumni/{{_id}}" class="alumus">
+                                <h2 href="alumni/{{_id}}" class="card__title">{{ fullname }}</h2>
+                            </a>   
+                            <p class="card__major">
+                                {{ major }}
+                            </p>
+                            <p class="card__title__working"><b>Vị trí công việc</b></p>
+                            <p class="card__working">
+                                {{ job_type }}
+                            </p>
+                            <div class="card__social">
+                                <a href="{{ facebook_link }}" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="{{ github_link }}" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="{{ linked_link }}" target="_blank">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <div class="card__bottom">
+                                <div class="card__button">
+                                    <a href="#">Liên hệ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {{/each}}
+                </div>
+                <div class="pagination pagination-table">
+                    <ul> <!--pages or li are comes from javascript --> </ul>
+                </div>
+            </div>
+        </section>
+
+        <script src="./assets/js/alumni.js"></script>
+        <script>
+            function searchBox() {
+                var input, filter, cards, cardContainer, title, i;
+                input = document.getElementById("findAlumni");
+                filter = input.value.toUpperCase();
+                cardContainer = document.getElementById("alumni_card");
+                cards = cardContainer.getElementsByClassName("card");
+                for (i = 0; i < cards.length; i++) {
+                    title = cards[i].querySelector(".card__title");
+                    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                        cards[i].style.display = "";
+                    } else {
+                        cards[i].style.display = "none";
+                    }
+                }
+            }
+
+        </script>
+
+        <script>
+            // selecting required element
+            const element = document.querySelector(".pagination ul");
+            let totalPages = 20;
+            let page = 10;
+
+            //calling function with passing parameters and adding inside element which is ul tag
+            element.innerHTML = createPagination(totalPages, page);
+            function createPagination(totalPages, page) {
+                let liTag = '';
+                let active;
+                let beforePage = page - 1;
+                let afterPage = page + 1;
+                if (page > 1) { //show the next button if the page value is greater than 1
+                    liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"><span><i class="fas fa-angle-left"></i> Prev</span></li>`;
+                }
+
+                if (page > 2) { //if page value is less than 2 then add 1 after the previous button
+                    liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+                    if (page > 3) { //if page value is greater than 3 then add this (...) after the first li or page
+                        liTag += `<li class="dots"><span>...</span></li>`;
+                    }
+                }
+
+                // how many pages or li show before the current li
+                if (page == totalPages) {
+                    beforePage = beforePage - 2;
+                } else if (page == totalPages - 1) {
+                    beforePage = beforePage - 1;
+                }
+                // how many pages or li show after the current li
+                if (page == 1) {
+                    afterPage = afterPage + 2;
+                } else if (page == 2) {
+                    afterPage = afterPage + 1;
+                }
+
+                for (var plength = beforePage; plength <= afterPage; plength++) {
+                    if (plength > totalPages) { //if plength is greater than totalPage length then continue
+                        continue;
+                    }
+                    if (plength == 0) { //if plength is 0 than add +1 in plength value
+                        plength = plength + 1;
+                    }
+                    if (page == plength) { //if page is equal to plength than assign active string in the active variable
+                        active = "active";
+                    } else { //else leave empty to the active variable
+                        active = "";
+                    }
+                    liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+                }
+
+                if (page < totalPages - 1) { //if page value is less than totalPage value by -1 then show the last li or page
+                    if (page < totalPages - 2) { //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+                        liTag += `<li class="dots"><span>...</span></li>`;
+                    }
+                    liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+                }
+
+                if (page < totalPages) { //show the next button if the page value is less than totalPage(20)
+                    liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"><span>Next <i class="fas fa-angle-right"></i></span></li>`;
+                }
+                element.innerHTML = liTag; //add li tag inside ul tag
+                return liTag; //reurn the li tag
+            }
+        </script>
+
+    </div>
+</body>
+{{> footer}}
+</html>

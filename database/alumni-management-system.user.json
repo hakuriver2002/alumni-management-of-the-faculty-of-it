@@ -1,0 +1,441 @@
+[{
+  "_id": {
+    "$oid": "65f5728ec3fac368a72efdec"
+  },
+  "fullname": "Trần Hoàng Quang Din",
+  "password": "$2b$10$9tJGHH51AlzPX5jFzH2Q6.J08zF.2KpnJZTmfbc8FabetcNXmVNKW",
+  "role": "client",
+  "email": "din090bmt@gmail.com",
+  "account_verify": true,
+  "avatar_url": "avatar-65f5728ec3fac368a72efdec.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T10:21:02.886Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:24:54.143Z"
+  },
+  "__v": 0,
+  "batch": "K24",
+  "birthday": {
+    "$date": "2002-06-02T00:00:00.000Z"
+  },
+  "class": "20050261",
+  "gender": "male",
+  "passing_year": 2024,
+  "tel": "0944217297",
+  "address": "915/74/8 Lê Văn Lương, Phước Kiển",
+  "major": "Kỹ thuật phần mềm",
+  "company": "FPT Software",
+  "job_type": "Java Fresher",
+  "join_date": {
+    "$date": "2024-03-18T00:00:00.000Z"
+  },
+  "facebook_link": "https://www.facebook.com/diner262/"
+},
+{
+  "_id": {
+    "$oid": "65f57454c3fac368a72efe01"
+  },
+  "fullname": "Admin",
+  "password": "$2b$10$6x9v/qr5VBitjc6RlrAPTucG0hooTdud0wFhuACGCFCtrHoPa.iXu",
+  "role": "admin",
+  "email": "admin@gmail.com",
+  "account_verify": true,
+  "avatar_url": "default-user.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T10:28:36.437Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-16T10:28:36.437Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f574a93ee2b0a6ac6044ad"
+  },
+  "fullname": "Doan Phuong Nam",
+  "password": "$2b$10$qvL36X0KOpoDjkNniwZDXuI4qto.TQQgI0m5bkoCwvwwCITlDe9ze",
+  "role": "client",
+  "email": "nam@example.com",
+  "account_verify": true,
+  "avatar_url": "avatar-65f574a93ee2b0a6ac6044ad.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T10:30:01.992Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:24:59.724Z"
+  },
+  "__v": 0,
+  "batch": "K24",
+  "birthday": {
+    "$date": "2002-02-01T00:00:00.000Z"
+  },
+  "class": "20050261",
+  "gender": "male",
+  "passing_year": 2024,
+  "tel": "0982737401",
+  "address": "",
+  "major": "Mạng máy tính",
+  "company": "FPT Software",
+  "job_type": "Fresher Developer",
+  "join_date": {
+    "$date": "2024-03-17T00:00:00.000Z"
+  },
+  "facebook_link": "https://www.facebook.com/Harry.2002s"
+},
+{
+  "_id": {
+    "$oid": "65f595d93ee2b0a6ac60450c"
+  },
+  "fullname": "Nguyen Tien Dung",
+  "password": "$2b$10$YQZs9sJWAeKZ2ljQvYte5uGACeGE/l4JBJ4s7uMnaRVkyTjPjC5iu",
+  "role": "client",
+  "email": "tiendung@gmail.com",
+  "account_verify": true,
+  "class": "20050261",
+  "tel": "0829283716",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-09-16T00:00:00.000Z"
+  },
+  "batch": "K24",
+  "passing_year": 2024,
+  "avatar_url": "avatar-65f595d93ee2b0a6ac60450c.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T12:51:37.038Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T14:35:28.035Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Hệ thống thông tin",
+  "company": "Shopee",
+  "job_type": "Senior Developer",
+  "join_date": {
+    "$date": "2024-09-02T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5a2883ee2b0a6ac6045ba"
+  },
+  "fullname": "Lê Gia Bảo",
+  "password": "$2b$10$a0zY2ThMiyvJU/eBe6z0e.HxYruYqMVoc6I2v9.rGwx6wp7eKTQwi",
+  "role": "client",
+  "email": "giabao@gmail.com",
+  "account_verify": true,
+  "class": "20050261",
+  "tel": "0987526294",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-08-21T00:00:00.000Z"
+  },
+  "batch": "K23",
+  "passing_year": 2023,
+  "avatar_url": "avatar-65f5a2883ee2b0a6ac6045ba.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T13:45:44.030Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:28:07.909Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Khoa học máy tính",
+  "company": "CÔNG TY CỔ PHẦN TẬP ĐOÀN TH",
+  "job_type": "Fresher Developer",
+  "join_date": {
+    "$date": "2023-07-07T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5a3d13ee2b0a6ac6045c3"
+  },
+  "fullname": "Nguyễn Thành Chất",
+  "password": "$2b$10$jWs0l/OTTJv/PDrquQcy7OE3AfG/Y6GSy/NPxUnskiXC5GfpqZ6ke",
+  "role": "client",
+  "email": "thanhchat@gmail.com",
+  "account_verify": true,
+  "class": "20050261",
+  "tel": "0852006362",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-11-24T00:00:00.000Z"
+  },
+  "batch": "K24",
+  "passing_year": 2024,
+  "avatar_url": "avatar-65f5a3d13ee2b0a6ac6045c3.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T13:51:13.397Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:52:16.904Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Kỹ thuật phần mềm",
+  "company": "CÔNG TY TNHH USMART",
+  "job_type": "Developer",
+  "join_date": {
+    "$date": "2024-05-31T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5a52b3ee2b0a6ac6045d7"
+  },
+  "fullname": "Trịnh Văn Dũng",
+  "password": "$2b$10$yD2e0o.RL.JCc6CTcIiIbu9u2pYyhR7iCgbgSUecq7JQ7OWOSD.S2",
+  "role": "client",
+  "email": "vandung@gmail.com",
+  "account_verify": true,
+  "class": "20050261",
+  "tel": "0785208842",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-07-20T00:00:00.000Z"
+  },
+  "batch": "K23",
+  "passing_year": 2023,
+  "avatar_url": "avatar-65f5a52b3ee2b0a6ac6045d7.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T13:56:59.060Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:29:56.475Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Khoa học máy tính",
+  "company": "CÔNG TY CP CÔNG NGHỆ GIÁO DỤC TRƯỜNG HỌC TRỰC TUYẾN - ONSCHOOL",
+  "job_type": "Engineer Design",
+  "join_date": {
+    "$date": "2024-01-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5a60e3ee2b0a6ac6045e0"
+  },
+  "fullname": "Lưu Đức Hải",
+  "password": "$2b$10$e1TRXgAbiATXafs5P2FrV.KH0zkJaMDv6lTptcxqEROXVL5CTCfa2",
+  "role": "client",
+  "email": "duchai@typcm.com",
+  "account_verify": true,
+  "class": "1904524",
+  "tel": "0875200654",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-08-15T00:00:00.000Z"
+  },
+  "batch": "K22",
+  "passing_year": 2022,
+  "avatar_url": "avatar-65f5a60e3ee2b0a6ac6045e0.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T14:00:46.127Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:30:56.325Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Mạng máy tính",
+  "company": "FPT INFORMATION SYSTEM",
+  "job_type": "Cloud Engineer",
+  "join_date": {
+    "$date": "2022-05-05T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5a7923ee2b0a6ac6045e9"
+  },
+  "fullname": "Trương Thị Ngân Trâm",
+  "password": "$2b$10$NuyQQciUaK45Ll0I3Og4He4wcr9QuxiypdgK9eTC/.IQhpaAqYwue",
+  "role": "client",
+  "email": "ngantram@hcmc.com",
+  "account_verify": true,
+  "class": "1802542377",
+  "tel": "0787225206",
+  "gender": "female",
+  "birthday": {
+    "$date": "2002-10-07T00:00:00.000Z"
+  },
+  "batch": "K21",
+  "passing_year": 2021,
+  "avatar_url": "avatar-65f5a7923ee2b0a6ac6045e9.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T14:07:14.572Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:32:57.033Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Hệ thống thông tin",
+  "company": "CÔNG TY TRUYỀN HÌNH SỐ VỆ TINH VIỆT NAM VSTV",
+  "job_type": "Engineer Design",
+  "join_date": {
+    "$date": "2021-09-09T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5adc53ee2b0a6ac604751"
+  },
+  "fullname": "Lương Phan Hoàn Nhân",
+  "password": "$2b$10$H77yxnLQcee2ccYnulmR8OwTucG/F1YsblyecyPMuBF2Sf7qmquGi",
+  "role": "client",
+  "email": "hoannhan@gmail.com",
+  "account_verify": true,
+  "class": "19087231",
+  "tel": "0875208909",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-06-14T00:00:00.000Z"
+  },
+  "batch": "K21",
+  "passing_year": 2022,
+  "avatar_url": "avatar-65f5adc53ee2b0a6ac604751.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T14:33:41.800Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:33:47.322Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Kỹ thuật phần mềm",
+  "company": "CÔNG TY TNHH GIẢI PHÁP KINH DOANH THẾ HỆ MỚI VNNG",
+  "job_type": "Developer",
+  "join_date": {
+    "$date": "2022-06-25T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5ae613ee2b0a6ac604762"
+  },
+  "fullname": "Nguyễn Văn Hậu",
+  "password": "$2b$10$lLeDQpNIpR1m0UN0K48VFuOdi3zs/4xGNDrozwJEYQDUlXwjADL8i",
+  "role": "client",
+  "email": "vanhau@gmail.com",
+  "account_verify": true,
+  "class": "18075322",
+  "tel": "0870887520",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-08-26T00:00:00.000Z"
+  },
+  "batch": "K19",
+  "passing_year": 2020,
+  "avatar_url": "avatar-65f5ae613ee2b0a6ac604762.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T14:36:17.250Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:39:04.458Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Khoa học máy tính",
+  "company": "CÔNG TY TNHH MEDIASTEP SOFTWARE VIỆT NAM",
+  "job_type": "Senior Developer",
+  "join_date": {
+    "$date": "2021-09-25T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f5af283ee2b0a6ac604773"
+  },
+  "fullname": "Trịnh Trường Duy",
+  "password": "$2b$10$PnVSpGPwnhcq5GCFJprtu.Y/OYTTEEOdrRuVyOCZ3frLTo7b6VDcm",
+  "role": "client",
+  "email": "truongduy@gmail.com",
+  "account_verify": true,
+  "class": "16620432",
+  "tel": "0876206506",
+  "gender": "male",
+  "birthday": {
+    "$date": "2002-11-22T00:00:00.000Z"
+  },
+  "batch": "K18",
+  "passing_year": 2019,
+  "avatar_url": "avatar-65f5af283ee2b0a6ac604773.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-16T14:39:36.228Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:46:02.643Z"
+  },
+  "__v": 0,
+  "address": "",
+  "major": "Mạng máy tính",
+  "company": "Viettel Digital",
+  "job_type": "Security Engineer",
+  "join_date": {
+    "$date": "2020-11-30T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65f6b9cac13b510ed786412f"
+  },
+  "fullname": "Trần Hoàng Bảo Khôi",
+  "password": "$2b$10$e86eiZF.su2l0OI0JWIPkuBTmS4p6tQVC6qMnsCNzoziD3r7xKtEu",
+  "role": "client",
+  "email": "baokhoi262@gmail.com",
+  "account_verify": false,
+  "avatar_url": "default-user.jpg",
+  "new_account": true,
+  "created_at": {
+    "$date": "2024-03-17T09:37:14.016Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-17T09:37:14.016Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f809e1c8720d20fdc7b01a"
+  },
+  "fullname": "Tran Duc Toan",
+  "password": "$2b$10$qaSrPrQ43QK2PHbS.RiUyOwIkTKtH/efMwP3uvnXweGJOwIKKh7dC",
+  "role": "client",
+  "email": "toanbmt1972@gmail.com",
+  "account_verify": false,
+  "avatar_url": "default-user.jpg",
+  "new_account": false,
+  "created_at": {
+    "$date": "2024-03-18T09:31:13.681Z"
+  },
+  "updated_at": {
+    "$date": "2024-03-18T09:31:13.681Z"
+  },
+  "__v": 0,
+  "batch": "K20",
+  "birthday": {
+    "$date": "1999-12-31T17:00:00.000Z"
+  },
+  "class": "2005H231",
+  "gender": "male",
+  "passing_year": 2023,
+  "tel": "0906493372"
+}]
